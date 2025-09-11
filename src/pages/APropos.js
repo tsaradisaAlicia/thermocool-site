@@ -1,81 +1,101 @@
 import { motion } from "framer-motion";
-import { Users, Wrench, Leaf } from "lucide-react"; // Icônes modernes
-import titre from "../assets/titre.png";
+import { Calendar, User, Users, Award, CheckCircle } from "lucide-react";
 
 export default function APropos() {
   return (
     <section id="apropos" className="py-20 bg-gray-50 relative overflow-hidden">
-      {/* Effet de fond décoratif */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-50 via-white to-gray-50 pointer-events-none"></div>
-
-      <div className="container mx-auto px-6 max-w-5xl relative">
-        {/* Titre avec image */}
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-10 flex justify-center items-center gap-3">
-          À propos de THERMOCOOL TECHNOLOGY MADAGASCAR 
-        </h2>
-
-        {/* Texte principal */}
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.6 }} 
-          className="text-gray-700 text-lg leading-relaxed text-center mb-6"
+      <div className="container mx-auto px-6 max-w-6xl">
+        {/* Titre */}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12"
         >
-          Notre entreprise est spécialisée en{" "}
-          <span className="font-semibold text-blue-700">
-            froid & climatisation, ventilation mécanique contrôlée, plomberie, adduction et surpression d’eau,
-            matériel de cuisine professionnelle
-          </span>{" "}
-          et bien plus encore. Nous proposons des solutions innovantes et adaptées aux besoins
-          de nos clients dans différents secteurs.
-        </motion.p>
+          À propos de <span className="text-blue-600">Thermocool Technology</span>
+        </motion.h2>
 
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8 }} 
-          className="text-gray-700 text-lg leading-relaxed text-center mb-12"
-        >
-          Fondée en <span className="font-semibold">2011</span>, 
-          <img 
-            src={titre} 
-            alt="THERMOCOOL TECHNOLOGY" 
-            className="h-6 w-auto inline-block align-middle mx-1"
-          /> 
-          est dirigée par <span className="font-semibold">RANDRIAMANAMPISOA Falimanana</span>, 
-          et met à disposition son expertise et son savoir-faire pour garantir confort, 
-          sécurité et performance énergétique.
-        </motion.p>
-
-        {/* Cartes stylées avec icônes */}
-        <div className="grid md:grid-cols-3 gap-8">
-          <motion.div 
-            whileHover={{ scale: 1.05 }} 
-            className="bg-white rounded-2xl shadow-lg p-6 text-center"
-          >
-            <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-            <h3 className="font-bold text-lg text-gray-800 mb-2">+500 Clients</h3>
-            <p className="text-gray-600 text-sm">Nous avons accompagné des centaines de clients satisfaits à travers divers projets.</p>
-          </motion.div>
-
-          <motion.div 
-            whileHover={{ scale: 1.05 }} 
-            className="bg-white rounded-2xl shadow-lg p-6 text-center"
-          >
-            <Wrench className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-            <h3 className="font-bold text-lg text-gray-800 mb-2">Expertise Technique</h3>
-            <p className="text-gray-600 text-sm">Une équipe qualifiée et expérimentée pour assurer la réussite de vos installations.</p>
-          </motion.div>
-
-          <motion.div 
-            whileHover={{ scale: 1.05 }} 
-            className="bg-white rounded-2xl shadow-lg p-6 text-center"
-          >
-            <Leaf className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-            <h3 className="font-bold text-lg text-gray-800 mb-2">Énergie & Durabilité</h3>
-            <p className="text-gray-600 text-sm">Nos solutions respectent l’environnement et optimisent la performance énergétique.</p>
-          </motion.div>
+        {/* Infos principales */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {[
+            {
+              icon: <Calendar className="w-10 h-10 text-blue-600 mb-4" />,
+              title: "Création",
+              text: "Fondée en 2011",
+            },
+            {
+              icon: <User className="w-10 h-10 text-blue-600 mb-4" />,
+              title: "Gérant",
+              text: "RANDRIAMANAMPISOA Falimanana",
+            },
+            {
+              icon: <Users className="w-10 h-10 text-blue-600 mb-4" />,
+              title: "Équipe",
+              text: "+150 techniciens certifiés ATEX (INERIS)",
+            },
+            {
+              icon: <Award className="w-10 h-10 text-blue-600 mb-4" />,
+              title: "Qualité",
+              text: "Système Management de la Qualité ISO 9001",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition"
+            >
+              {item.icon}
+              <h3 className="font-semibold text-lg">{item.title}</h3>
+              <p className="text-gray-600 text-sm mt-1">{item.text}</p>
+            </motion.div>
+          ))}
         </div>
+
+        {/* Paragraphe mission */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="bg-gradient-to-r from-blue-900 to-blue-500 text-white rounded-2xl shadow-xl p-8 text-center mb-12"
+        >
+          <p className="text-lg leading-relaxed">
+            Thermocool Technology met tout son savoir-faire pour assurer des
+            prestations de qualité et s'engage à accompagner ses clients pas à
+            pas, de l’étude jusqu’à la réussite de leurs projets.
+          </p>
+        </motion.div>
+
+        {/* Objectifs */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-center"
+        >
+          <h3 className="text-2xl font-bold text-blue-900 mb-6">
+            Notre Objectif est de vous proposer:
+          </h3>
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {[
+              "Une installation aux normes",
+              "Avec exploitation rationnelle",
+              "Optimisation de vos budgets",
+              "Respect de l’environnement",
+            ].map((objectif, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center bg-white rounded-xl shadow-md p-4"
+              >
+                <CheckCircle className="text-blue-600 w-6 h-6 mr-3" />
+                <span className="text-gray-700 font-medium">{objectif}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

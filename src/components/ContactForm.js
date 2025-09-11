@@ -12,10 +12,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_ob80ewv", // <-- ton Service ID
+        "service_fezkdwo", // <-- ton Service ID
         "template_kftp3ya", // <-- ton Template ID
         form.current,
-        "0vQutlRodF9J46YdX" // <-- ta Public Key
+        "0vQUtlRodf9J46YdX" // <-- ta Public Key
       )
       .then(
         () => {
@@ -36,7 +36,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-blue-900 rounded-2xl">
+    <section id="contact" className="bg-gradient-to-r from-blue-900 to-blue-500 py-20 bg-blue-900 rounded-2xl">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Infos de contact */}
@@ -50,10 +50,10 @@ export default function Contact() {
             </div>
 
             <h3 className="text-xl font-semibold text-white">Nos coordonnées</h3>
-            <p>📍 Adresse : Lot 114 CI Behitsy Ambohimangakely, Antananarivo, MADAGASCAR</p>
+            <p>📍 Adresse : Lot 26 B IV By-pass Ambohimangakely, Antananarivo 102, MADAGASCAR</p>
             <p>📞 Téléphone : 034 60 931 03 / 034 21 310 81</p>
             <p>
-              ✉️ Email :{" "}
+              ✉️ E-mail :{" "}
               <a
                 href="mailto:thermocool@thermocool-mg.com"
                 className="text-blue-300 hover:underline"
@@ -61,6 +61,7 @@ export default function Contact() {
                 thermocool@thermocool-mg.com
               </a>
             </p>
+              <p> Nos Antennes: Nosy-Be, Moramanga, Toamasina</p>
             <p className="mt-6">
               Nous sommes disponibles pour répondre à vos demandes, projets et partenariats.
               Envoyez-nous un message via le formulaire ci-contre !
@@ -85,7 +86,7 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block font-medium text-gray-700">Email</label>
+              <label className="block font-medium text-gray-700">E-mail</label>
               <input
                 type="email"
                 name="email"

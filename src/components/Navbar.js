@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, Search } from "lucide-react"; 
+import { Menu, X, Search } from "lucide-react"; 
 import marque from "../assets/marque.png";
 import titre from "../assets/titre.png";
 
@@ -8,19 +8,40 @@ export default function Navbar() {
   const [query, setQuery] = useState("");
 
   // Fonction recherche
-  const handleSearch = (e) => {
-    e.preventDefault();
-    const sections = ["accueil", "apropos", "secteurs", "contact"];
-    const found = sections.find((id) =>
-      id.toLowerCase().includes(query.toLowerCase())
-    );
+const handleSearch = (e) => {
+  e.preventDefault();
+  const q = query.trim().toLowerCase();
+  if (!q) return;
 
-    if (found) {
-      document.getElementById(found)?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      alert("Aucun résultat trouvé !");
+  // Chercher tous les éléments de texte
+  const walker = document.createTreeWalker(
+    document.body,
+    NodeFilter.SHOW_TEXT,
+    null,
+    false
+  );
+
+  let foundNode = null;
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (node.nodeValue.toLowerCase().includes(q)) {
+      foundNode = node.parentElement; // on prend l'élément qui contient le texte
+      break;
     }
-  };
+  }
+
+  if (foundNode) {
+    foundNode.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    // On peut aussi mettre un petit highlight temporaire
+    foundNode.style.background = "yellow";
+    setTimeout(() => {
+      foundNode.style.background = "";
+    }, 2000);
+  } else {
+    alert("Aucun résultat trouvé !");
+  }
+};
 
   return (
     <nav className="bg-white shadow-md fixed w-full z-20">
@@ -42,7 +63,6 @@ export default function Navbar() {
               onChange={(e) => setQuery(e.target.value)}
               className="w-full border border-gray-300 rounded-full pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            {/* Icône loupe */}
             <Search
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
               size={18}
@@ -55,16 +75,21 @@ export default function Navbar() {
           <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
             <li><a href="#accueil" className="hover:text-blue-600">Accueil</a></li>
             <li><a href="#apropos" className="hover:text-blue-600">À propos</a></li>
-            <li><a href="#secteurs" className="hover:text-blue-600">Secteurs</a></li>
+            <li><a href="#service" className="hover:text-blue-600">Prestations de Service</a></li>
+            <li><a href="#activites" className="hover:text-blue-600">Activités</a></li>
             <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
           </ul>
 
-          {/* Bouton burger (toujours visible) */}
+          {/* Bouton burger (toujours visible maintenant) */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="focus:outline-none"
           >
-            <Menu size={28} className="text-gray-700" />
+            {menuOpen ? (
+              <X size={28} className="text-gray-700" />
+            ) : (
+              <Menu size={28} className="text-gray-700" />
+            )}
           </button>
         </div>
       </div>
@@ -75,7 +100,8 @@ export default function Navbar() {
           <ul className="flex flex-col space-y-4 text-gray-700 font-medium">
             <li><a href="#accueil" onClick={() => setMenuOpen(false)}>Accueil</a></li>
             <li><a href="#apropos" onClick={() => setMenuOpen(false)}>À propos</a></li>
-            <li><a href="#secteurs" onClick={() => setMenuOpen(false)}>Secteurs</a></li>
+            <li><a href="#service" onClick={() => setMenuOpen(false)}>Prestations de Service</a></li>
+            <li><a href="#secteurs" onClick={() => setMenuOpen(false)}>Activités</a></li>
             <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
           </ul>
         </div>

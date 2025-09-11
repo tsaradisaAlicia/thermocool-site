@@ -5,18 +5,20 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
 
-import adduction from "../assets/adduction.jpg";
+
+import air from "../assets/armoire2.jpg";
 import clim from "../assets/clim.jpg";
-import air from "../assets/air.jpg";
+import adduction from "../assets/clim1.jpg";
 import cuisine from "../assets/cuisine.jpg";
 import desenfumage from "../assets/desenfumage.jpg";
-import vmc from "../assets/vmc.jpg";
+import vmc from "../assets/vmc.png";
 
 export default function Accueil() {
   const images = [
-    { src: adduction, alt: "Adduction d’eau" },
-    { src: clim, alt: "Climatisation" },
+
     { src: air, alt: "Traitement de l’air" },
+    { src: clim, alt: "Climatisation" },
+    { src: adduction, alt: "clim" },
     { src: cuisine, alt: "Cuisine professionnelle" },
     { src: desenfumage, alt: "Désenfumage" },
     { src: vmc, alt: "VMC" },

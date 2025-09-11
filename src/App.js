@@ -1,7 +1,8 @@
 import Navbar from "./components/Navbar";
 import Accueil from "./pages/Accueil";
 import APropos from "./pages/APropos";
-import Secteurs from "./pages/Secteurs";
+import Services from "./components/Services";
+import Secteurs from "./pages/Activites";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
@@ -12,6 +13,7 @@ function App() {
       <main className="pt-16">
         <Accueil />
         <APropos />
+        <Services />
         <Secteurs />
         <Contact />
       </main>
