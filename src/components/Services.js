@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Lightbulb, Hammer, Wrench } from "lucide-react"; 
 
 // Import des images (diaporamas)
+import etude0 from "../assets/etude/etude0.jpg";
 import etude1 from "../assets/etude/etude1.jpg";
 import etude2 from "../assets/etude/etude2.jpg";
+import etude3 from "../assets/etude/etude3.jpg";
+import etude4 from "../assets/etude/etude4.jpg";
 
 import install0 from "../assets/installation/installation0.jpg";
 import install1 from "../assets/installation/installation1.jpeg";
@@ -22,7 +26,8 @@ import maint6 from "../assets/maintenance/maintenance6.jpg";
 const prestations = [
   {
     titre: "Études - Conception",
-    images: [etude1, etude2],
+    description: "La réussite du projet commence par une étude technique fiable. Ainsi, après l’analyse et compréhension des besoins, évaluation des contraintes, nous proposons des solutions sur mesure tout en respectant les exigences réglementaires en établissant des notes de calcul et élaborant des plans avec conception 3D, avec un budget en ressources et matériels.",
+    images: [etude0, etude1, etude2, etude3, etude4],
     details: [
       "Études techniques",
       "Estimation des coûts des ouvrages",
@@ -33,6 +38,7 @@ const prestations = [
   },
   {
     titre: "Réalisation",
+    description: "Afin de garantir la qualité, la sécurité et l’efficacité du projet, nous assurons la réalisation des travaux suivant les règles de l’art conformément aux conceptions. L’assurance et suivi de la qualité sont notre préoccupation permanente. Les installations sont soumises à des tests de conformités après une mise en service et réglage pointus.",
     images: [install0, install1, install2, install3, install4],
     details: [
       "Installation des équipements",
@@ -43,6 +49,7 @@ const prestations = [
   },
   {
     titre: "Maintenance - Dépannage",
+    description: "Nous garantissons la durabilité et la performance de vos installations grâce à nos services de maintenance et de dépannage.",
     images: [maint0, maint1, maint2, maint3, maint4, maint5, maint6],
     details: [
       "Contrats d’entretien: maintenance préventive ou curative",
@@ -54,6 +61,7 @@ const prestations = [
   },
 ];
 
+
 export default function Prestations() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -61,8 +69,8 @@ export default function Prestations() {
     <section id="service" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Titre principal */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
-          Prestations de <span className="text-blue-600">Service</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12 italic font-serif">
+          Prestations de <span className="text-blue-600 italic font-serif">Service</span>
         </h2>
         {/* Paragraphe intro */}
         <p className="text-center text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
@@ -96,6 +104,22 @@ export default function Prestations() {
             transition={{ duration: 0.6 }}
             className="bg-white rounded-2xl shadow-xl p-6 md:col-span-3"
           >
+            {/* Paragraphe spécifique au service */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex items-start gap-3 p-4 mb-4 rounded-lg bg-blue-50 border-l-4 border-blue-600 shadow-sm"
+            >
+              {/* Icône dynamique selon le service */}
+              {activeIndex === 0 && <Lightbulb className="text-blue-600 w-20 h-6 mt-1" />}
+              {activeIndex === 1 && <Hammer className="text-blue-600 w-20 h-6 mt-1" />}
+              {activeIndex === 2 && <Wrench className="text-blue-600 w-6 h-6 mt-1" />}
+
+              <p className="text-gray-700 text-base md:text-lg italic">
+                {prestations[activeIndex].description}
+              </p>
+            </motion.div>
             {/* Diaporama */}
             <Slideshow images={prestations[activeIndex].images} />
 

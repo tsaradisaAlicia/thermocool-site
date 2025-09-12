@@ -16,7 +16,7 @@ import des1 from "../assets/vmc/des1.png";
 import vmc1 from "../assets/vmc/vmc1.jpg";
 import des2 from "../assets/vmc/des2.jpg";
 import vmc2 from "../assets/vmc/vmc2.jpg";
-import des3 from "../assets/vmc/des3.jpg";
+import des3 from "../assets/vmc/des3.jpg";                                                                  
 import vmc3 from "../assets/vmc/vmc3.jpg";
 
 import plomberie1 from "../assets/plomberie/plomberie1.jpeg";
@@ -96,8 +96,8 @@ export default function Activites() {
       <div className="container mx-auto px-6 max-w-7xl">
         
         {/* Titre principal */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
-          Nos <span className="text-blue-600">Domaines d’Activités</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12 italic font-serif">
+          Nos <span className="text-blue-600 italic font-serif">Domaines d’Activités</span>
         </h2>
 
         {/* Onglets */}
