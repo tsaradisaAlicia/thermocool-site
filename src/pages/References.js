@@ -87,7 +87,7 @@ const References = () => {
         <div className="text-center max-w-3xl mx-auto text-gray-700 leading-relaxed">
           <p className="mb-4">
            Cette liste n’est pas exhaustive, nous avons plusieurs chantiers en cours de réalisation.
-A part nos quelques réalisations suscitées, nous avons des dizaines de contrat de maintenance des plusieurs clients d’envergure (AFD, SHERRITT Moramanga, GRAPHOPRINT, JB USINE, Groupe TALYS, LEADER PRICE, LECOFRUIT, VET CLINIC, PLUSIEURS HOTELS,…)
+A part nos quelques réalisations suscitées, nous avons des dizaines de contrat de maintenance des plusieurs clients d’envergure (AFD,NEWREST MORAMANGA ET TAMATAVE, SHERRITT Moramanga, GRAPHOPRINT, JB USINE, Groupe TALYS, LEADER PRICE, LECOFRUIT, INSTITUT PASTEUR DE MADAGASCAR, PLUSIEURS GRANDS HOTELS,…)
           </p>
         </div>
       <div className="grid md:grid-cols-3 gap-8 px-6 md:px-20">
