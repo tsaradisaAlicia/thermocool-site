@@ -99,15 +99,9 @@ export default function Produits() {
             service :
           </p>
           <p className="font-bold mb-6">
-            ETUDE, FOURNITURE, INSTALLATION, SERVICES APRES VENTE, EXPERTISES
+            ETUDES, FOURNITURES, INSTALLATION, SERVICES APRES VENTE, EXPERTISES
           </p>
-          <p>
-            Notre objectif est de vous proposer : <br />
-            <span className="font-bold">
-              UNE INSTALLATION AUX NORMES, AVEC EXPLOITATION RATIONNELLE,
-              OPTIMISATION DE VOS BUDGETS, RESPECT DE L’ENVIRONNEMENT
-            </span>
-          </p>
+          
         </div>
       </div>
     </section>
