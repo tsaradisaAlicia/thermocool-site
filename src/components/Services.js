@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Lightbulb, Hammer, Wrench } from "lucide-react"; 
+import { Lightbulb, Hammer, Wrench } from "lucide-react";
 
 // Import des images (diaporamas)
 import etude0 from "../assets/etude/etude0.jpg";
