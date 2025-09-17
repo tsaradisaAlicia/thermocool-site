@@ -90,7 +90,6 @@ export default function Produits() {
             </motion.div>
           ))}
         </div>
-
         {/* Texte en bas */}
         <div className="text-center max-w-3xl mx-auto text-gray-700 leading-relaxed">
           <p className="mb-4">
