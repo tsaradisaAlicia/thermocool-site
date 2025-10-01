@@ -13,7 +13,7 @@ export default function APropos() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12 italic font-serif"
         >
-          À propos de <span className="text-blue-600 italic font-serif">Thermocool Madagascar</span>
+          À propos de <span className="text-blue-600 italic font-serif">Thermocool Technology</span>
         </motion.h2>
 
         {/* Présentation générale (image + texte) */}
@@ -38,15 +38,14 @@ export default function APropos() {
               Présentation <span className="text-blue-600">générale</span>
             </h3>
             <p className="mb-4">
-              Nos techniciens sont certifiés ATEX par « INERIS », nous sommes aptes à
+              Nos techniciens sont professionnels, nous sommes aptes à
               travailler même dans des milieux à atmosphères explosives. Dans ce sens,
               nous sommes capables de classer vos zones à risque d’explosions et à engager
-              la démarche d’analyse de risque correspondante selon la directive ATEX
-              européenne 94/9CE.
+              la démarche d’analyse de risque correspondante.
             </p>
             <p className="mb-4 border-l-4 border-blue-500 pl-4 italic">
-              D’autre part, nous sommes dotés d’un Système de Management de la Qualité qui
-              répond aux exigences d’ISO 9001. À ce propos, nous sommes audités
+              D’autre part, nous sommes dotés d’un Système de Management de la Qualité.
+              À ce propos, nous sommes audités
               régulièrement par certains de nos clients.
               <br />
               Certains de nos techniciens ont reçu une formation sur la sécurité et la sûreté
@@ -81,12 +80,12 @@ export default function APropos() {
             {
               icon: <Users className="w-10 h-10 text-blue-600 mb-4" />,
               title: "Équipe",
-              text: "+130 techniciens certifiés ATEX (INERIS)",
+              text: "+130 techniciens",
             },
             {
               icon: <Award className="w-10 h-10 text-blue-600 mb-4" />,
               title: "Qualité",
-              text: "Système Management de la Qualité ISO 9001",
+              text: "Système Management de la Qualité",
             },
           ].map((item, index) => (
             <motion.div

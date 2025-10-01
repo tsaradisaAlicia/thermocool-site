@@ -50,18 +50,18 @@ export default function Contact() {
             </div>
 
             <h3 className="text-xl font-semibold text-white">Nos coordonnées</h3>
-            <p>📍 Adresse : Lot 26 B IV By-pass Ambohimangakely, Antananarivo 102, MADAGASCAR</p>
-            <p>📞 Téléphone : 034 60 931 03 / 034 21 310 81</p>
+            <p>📍 Adresse : Lot 26 B IV By-pass Ambohimangakely, Antananarivo 103, MADAGASCAR</p>
+            <p>📞 Téléphone : +261 34 60 931 03 / +261 34 21 310 81</p>
             <p>
               ✉️ E-mail :{" "}
               <a
-                href="mailto:thermocool@thermocool-mg.com"
+                href="mailto:contact@thermocool-thechnology.com"
                 className="text-blue-300 hover:underline"
               >
-                thermocool@thermocool-mg.com
+                contact@thermocool-thechnology.com
               </a>
             </p>
-              <p> Nos Antennes: Nosy-Be, Moramanga, Toamasina</p>
+              <p> Nos Antennes: Nosy-Be, Moramanga, Toamasina et Rwanda</p>
             <p className="mt-6">
               Nous sommes disponibles pour répondre à vos demandes, projets et partenariats.
               Envoyez-nous un message via le formulaire ci-contre !

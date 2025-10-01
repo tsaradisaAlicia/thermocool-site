@@ -64,8 +64,8 @@ export default function Navbar() {
               <Mail size={16} className="text-blue-600" />
               <span className="font-bold text-blue-900">E-mail :</span>
             </div>
-            <a href="mailto:thermocool@thermocool-mg.com" className="font-medium">
-              thermocool@thermocool-mg.com
+            <a href="mailto:contact@thermocool-thechnology.com" className="font-medium">
+              contact@thermocool-thechnology.com
             </a>
           </div>
 

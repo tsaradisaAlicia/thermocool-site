@@ -4,9 +4,9 @@ import { Lightbulb, Hammer, Wrench } from "lucide-react";
 
 // Import des images (diaporamas)
 import etude0 from "../assets/etude/etude0.jpg";
-//import etude1 from "../assets/etude/etude1.jpg";
+import etude1 from "../assets/etude/etude1.jpg";
 import etude2 from "../assets/etude/etude2.jpg";
-//import etude3 from "../assets/etude/etude3.jpg";
+import etude3 from "../assets/etude/etude3.jpg";
 import etude4 from "../assets/etude/etude4.jpg";
 
 import install0 from "../assets/installation/installation0.jpg";
@@ -27,7 +27,7 @@ const prestations = [
   {
     titre: "Études - Conception",
     description: "La réussite du projet commence par une étude technique fiable. Ainsi, après l’analyse et compréhension des besoins, évaluation des contraintes, nous proposons des solutions sur mesure tout en respectant les exigences réglementaires en établissant des notes de calcul et élaborant des plans avec conception 3D, avec un budget en ressources et matériels.",
-    images: [etude0, etude2, etude4],
+    images: [etude1, etude0, etude3, etude2, etude4],
     details: [
       "Études techniques",
       "Estimation des coûts des ouvrages",

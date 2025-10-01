@@ -4,22 +4,22 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-
+import bureau from "../assets/bureau.jpg";
 import air from "../assets/armoire2.jpg";
 import clim from "../assets/clim.jpg";
 import adduction from "../assets/clim1.jpg";
 import cuisine from "../assets/cuisine.jpg";
-import desenfumage from "../assets/desenfumage.jpg";
+//import desenfumage from "../assets/desenfumage.jpg";
 import vmc from "../assets/vmc.png";
 
 export default function Accueil() {
   const images = [
-
+    { src: bureau, alt: "Bureau Thermocool" },
     { src: air, alt: "Traitement de l’air" },
     { src: clim, alt: "Climatisation" },
     { src: adduction, alt: "clim" },
     { src: cuisine, alt: "Cuisine professionnelle" },
-    { src: desenfumage, alt: "Désenfumage" },
+   // { src: desenfumage, alt: "Désenfumage" },
     { src: vmc, alt: "VMC" },
   ];
 
@@ -43,7 +43,7 @@ export default function Accueil() {
           />
           <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
-              Bienvenue chez THERMOCOOL MADAGASCAR
+              Bienvenue chez THERMOCOOL TECHNOLOGY
             </h2>
             <p className="text-lg max-w-2xl drop-shadow-md">
               Nous accompagnons nos clients avec des solutions innovantes et efficaces pour leur croissance.
