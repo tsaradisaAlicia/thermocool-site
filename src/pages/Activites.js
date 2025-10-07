@@ -88,7 +88,10 @@ const domaines = [
   },
 ];
 
+
+
 export default function Activites() {
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -133,9 +136,7 @@ export default function Activites() {
   <div className="flex flex-col md:flex-row gap-6 items-start">
     {/* Diaporama */}
       <Slideshow images={domaines[activeIndex].images} />
-    
-
-    {/* Liste des détails */}
+      {/* Liste des détails */}
     <div className="flex-1">
       <ul className="text-gray-700 list-disc list-inside space-y-2">
         {domaines[activeIndex].desc.map((item, j) => (

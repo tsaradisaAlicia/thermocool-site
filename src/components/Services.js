@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 import { Lightbulb, Hammer, Wrench } from "lucide-react";
 
 // Import des images (diaporamas)
-import etude0 from "../assets/etude/etude0.jpg";
+//import etude0 from "../assets/etude/etude0.jpg";
 import etude1 from "../assets/etude/etude1.jpg";
 import etude2 from "../assets/etude/etude2.jpg";
 import etude3 from "../assets/etude/etude3.jpg";
 import etude4 from "../assets/etude/etude4.jpg";
 
-import install0 from "../assets/installation/installation0.jpg";
+//import install0 from "../assets/installation/installation0.jpg";
 //import install1 from "../assets/installation/installation1.jpeg";
 import install2 from "../assets/installation/installation2.jpg";
 import install3 from "../assets/installation/installation3.jpg";
@@ -19,15 +19,15 @@ import maint0 from "../assets/maintenance/maintenance0.png";
 import maint1 from "../assets/maintenance/maintenance1.jpg";
 import maint2 from "../assets/maintenance/maintenance2.jpg";
 import maint3 from "../assets/maintenance/maintenance3.jpg";
-import maint4 from "../assets/maintenance/maintenance4.jpg";
-import maint5 from "../assets/maintenance/maintenance5.jpg";
-import maint6 from "../assets/maintenance/maintenance6.jpg";
+//import maint4 from "../assets/maintenance/maintenance4.jpg";
+//import maint5 from "../assets/maintenance/maintenance5.jpg";
+//import maint6 from "../assets/maintenance/maintenance6.jpg";
 
 const prestations = [
   {
     titre: "Études - Conception",
     description: "La réussite du projet commence par une étude technique fiable. Ainsi, après l’analyse et compréhension des besoins, évaluation des contraintes, nous proposons des solutions sur mesure tout en respectant les exigences réglementaires en établissant des notes de calcul et élaborant des plans avec conception 3D, avec un budget en ressources et matériels.",
-    images: [etude1, etude0, etude3, etude2, etude4],
+    images: [etude1, etude3, etude2, etude4],
     details: [
       "Études techniques",
       "Estimation des coûts des ouvrages",
@@ -39,7 +39,7 @@ const prestations = [
   {
     titre: "Réalisation",
     description: "Afin de garantir la qualité, la sécurité et l’efficacité du projet, nous assurons la réalisation des travaux suivant les règles de l’art conformément aux conceptions. L’assurance et suivi de la qualité sont notre préoccupation permanente. Les installations sont soumises à des tests de conformités après une mise en service et réglage pointus.",
-    images: [install0, install2, install3, install4],
+    images: [ install2, install3, install4],
     details: [
       "Installation des équipements",
       "Mise en service des équipements",
@@ -50,7 +50,7 @@ const prestations = [
   {
     titre: "Maintenance - Dépannage",
     description: "Nous garantissons la durabilité et la performance de vos installations grâce à nos services de maintenance et de dépannage.",
-    images: [maint0, maint1, maint2, maint3, maint4, maint5, maint6],
+    images: [maint0, maint1, maint2, maint3],
     details: [
       "Contrats d’entretien: maintenance préventive ou curative",
       "Service après-vente",
@@ -60,7 +60,6 @@ const prestations = [
     ],
   },
 ];
-
 
 export default function Prestations() {
   const [activeIndex, setActiveIndex] = useState(0);
