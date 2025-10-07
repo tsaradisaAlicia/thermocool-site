@@ -88,8 +88,6 @@ const domaines = [
   },
 ];
 
-
-
 export default function Activites() {
 
   const [activeIndex, setActiveIndex] = useState(0);
