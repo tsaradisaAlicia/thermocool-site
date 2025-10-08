@@ -15,11 +15,14 @@ import habibo from "../assets/reference/habibo.jpg";
 import luxoptica from "../assets/reference/luxoptica.jpg";
 import vima from "../assets/reference/vima.png";
 import ipm from "../assets/reference/ipm.png";
+import ambatovy from "../assets/reference/ambatovy.jpg";
+import etoile from "../assets/reference/5ETOILES.jpg";
+import ece from "../assets/reference/ece.png";
 
 // Tableau des logos
 const references = [
   afd, rd, lp1, lecofruit, vivo, cfao, orange,
-  graphoprint, ipm, mabel, colas, habibo, luxoptica, vima, gastro,
+  graphoprint, ipm, mabel, colas, habibo, luxoptica, vima, gastro, ambatovy, etoile, ece
 ];
 
 const References = () => {
