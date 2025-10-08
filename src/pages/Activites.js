@@ -133,7 +133,7 @@ export default function Activites() {
   {/* Flex zone : image + liste */}
   <div className="flex flex-col md:flex-row gap-6 items-start">
     {/* Diaporama */}
-      <Slideshow images={domaines[activeIndex].images} />
+      <ImageGrid images={domaines[activeIndex].images} />
       {/* Liste des détails */}
     <div className="flex-1">
       <ul className="text-gray-700 list-disc list-inside space-y-2">
@@ -150,48 +150,27 @@ export default function Activites() {
   );
 }
 
-// Composant Diaporama
-function Slideshow({ images }) {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(
-      () => setIndex((prev) => (prev + 1) % images.length),
-      3000
-    );
-    return () => clearInterval(timer);
-  }, [images.length]);
-
+// Composant Grille d'images
+function ImageGrid({ images }) {
   return (
-   <div className="relative mx-auto w-full max-w-3xl h-72 md:h-96 overflow-hidden rounded-xl shadow-md bg-white flex items-center justify-center">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 w-full md:w-1/2">
       {images.map((src, i) => (
-        <motion.img
+        <motion.div
           key={i}
-          src={src}
-          alt=""
-          className={`absolute w-full h-full object-contain ${
-            i === index ? "opacity-100" : "opacity-0"
-          }`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: i === index ? 1 : 0 }}
-          transition={{ duration: 0.8 }}
-        />
-      ))}
-
-      {/* Petits points indicateurs */}
-      <div className="absolute bottom-3 flex justify-center w-full gap-2">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full ${
-              i === index ? "bg-blue-600" : "bg-gray-300"
-            }`}
+          className="overflow-hidden rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: i * 0.05 }}
+        >
+          <img
+            src={src}
+            alt=""
+            className="w-full h-40 md:h-48 object-cover"
           />
-        ))}
-      </div>
+        </motion.div>
+      ))}
     </div>
-
   );
 }
-
+  

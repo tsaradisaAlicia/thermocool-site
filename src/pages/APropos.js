@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Calendar, User, Users, Award, CheckCircle } from "lucide-react";
-import maintenance2 from "../assets/maintenance/maintenance2.jpg";
+import bureau1 from "../assets/bureau1.jpg";
 
 export default function APropos() {
   return (
@@ -20,7 +20,7 @@ export default function APropos() {
         <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
           {/* Image */}
           <motion.img
-            src={maintenance2}
+            src={bureau1}
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
