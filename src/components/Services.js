@@ -11,7 +11,8 @@ import etude4 from "../assets/etude/etude4.jpg";
 
 //import install0 from "../assets/installation/installation0.jpg";
 //import install1 from "../assets/installation/installation1.jpeg";
-import install2 from "../assets/installation/installation2.jpg";
+import cuisine0 from "../assets/cuisine/cuisine0.jpg";
+import install5 from "../assets/installation/installation5.jpg";
 import install3 from "../assets/installation/installation3.jpg";
 import install4 from "../assets/installation/installation4.jpg";
 
@@ -39,7 +40,7 @@ const prestations = [
   {
     titre: "Réalisation",
     description: "Afin de garantir la qualité, la sécurité et l’efficacité du projet, nous assurons la réalisation des travaux suivant les règles de l’art conformément aux conceptions. L’assurance et suivi de la qualité sont notre préoccupation permanente. Les installations sont soumises à des tests de conformités après une mise en service et réglage pointus.",
-    images: [ install2, install3, install4],
+    images: [ cuisine0, install5, install3, install4],
     details: [
       "Installation des équipements",
       "Mise en service des équipements",

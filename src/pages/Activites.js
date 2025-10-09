@@ -8,7 +8,7 @@ import clim4 from "../assets/climatisation&froid/clim4.jpg";
 import clim5 from "../assets/climatisation&froid/clim5.jpg";
 import clim6 from "../assets/climatisation&froid/clim6.jpg";
 import clim7 from "../assets/climatisation&froid/clim7.jpg";
-import froid from "../assets/climatisation&froid/froid.jpg";
+//import froid from "../assets/climatisation&froid/froid.jpg";
 
 import ventilation from "../assets/vmc/ventilation.png";
 import vmc0 from "../assets/vmc/vmc0.jpg";
@@ -38,7 +38,7 @@ import cuisine6 from "../assets/cuisine/cuisine6.jpg";
 const domaines = [
   {
     titre: "Froid & Climatisation",
-    images: [clim0, clim1, clim2, clim3, clim4, clim5, clim6, clim7, froid],
+    images: [clim0, clim1, clim2, clim3, clim4, clim5, clim6, clim7],
     desc: [
       "Salles informatiques",
       "Salles blanches",
