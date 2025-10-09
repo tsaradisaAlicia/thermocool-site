@@ -18,10 +18,13 @@ import ipm from "../assets/reference/ipm.png";
 import ambatovy from "../assets/reference/ambatovy.jpg";
 import etoile from "../assets/reference/5ETOILES.jpg";
 import ece from "../assets/reference/ece.png";
+import materauto from "../assets/reference/materauto.png";
+import bovima from "../assets/reference/bovima.png";
+import banque from "../assets/reference/banque.png";
 
 // Tableau des logos
 const references = [
-  afd, rd, lp1, lecofruit, vivo, cfao, orange,
+  afd, rd, lp1, lecofruit, vivo, cfao, orange,materauto,bovima, banque,
   graphoprint, ipm, mabel, colas, habibo, luxoptica, vima, gastro, ambatovy, etoile, ece
 ];
 
