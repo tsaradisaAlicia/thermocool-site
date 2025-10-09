@@ -11,10 +11,17 @@ export default function APropos() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12 italic font-serif"
+          className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-6 italic font-serif drop-shadow-sm"
         >
           À propos de <span className="text-blue-600 italic font-serif">Thermocool Technology</span>
         </motion.h2>
+        {/* Ligne décorative animée */}
+        <motion.div
+          initial={{ scaleX: 0 }}   
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1 }}
+          className="mx-auto w-32 h-1 bg-blue-600 rounded-full mb-12"
+        />
 
         {/* Présentation générale (image + texte) */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-16">

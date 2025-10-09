@@ -29,10 +29,18 @@ const References = () => {
   return (
     <section id="references" className="py-16 bg-gray-50 overflow-hidden">
       <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 italic font-serif mb-4">
-          Nos <span className="text-blue-600">références</span>
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-6 italic font-serif drop-shadow-sm">
+          Nos <span className="text-blue-600 italic font-serif">références</span>
         </h2>
-        <p className="text-gray-700 max-w-3xl mx-auto">
+        {/* Ligne décorative animée */}
+        <motion.div
+          initial={{ scaleX: 0 }}   
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1 }}
+          className="mx-auto w-32 h-1 bg-blue-600 rounded-full mb-12"
+        />
+
+        <p className="text-center text-lg text-gray-700 mb-10 max-w-4xl mx-auto">
           Notre succès se mesure à la confiance que nos clients nous accordent.  
           Découvrez les entreprises et organisations avec lesquelles nous avons bâti des partenariats solides.
         </p>

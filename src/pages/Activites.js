@@ -97,9 +97,16 @@ export default function Activites() {
       <div className="container mx-auto px-6 max-w-7xl">
         
         {/* Titre principal */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12 italic font-serif">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-6 italic font-serif drop-shadow-sm">
           Nos <span className="text-blue-600 italic font-serif">Domaines d’Activités</span>
         </h2>
+        {/* Ligne décorative animée */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 1 }}
+            className="mx-auto w-32 h-1 bg-blue-600 rounded-full mb-12"
+          />
 
         {/* Onglets */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">

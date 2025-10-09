@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Lightbulb, Hammer, Wrench } from "lucide-react";
 
-// Import des images (diaporamas)
+// Import des images (maintenues)
 //import etude0 from "../assets/etude/etude0.jpg";
 import etude1 from "../assets/etude/etude1.jpg";
 import etude2 from "../assets/etude/etude2.jpg";
@@ -65,33 +65,51 @@ export default function Prestations() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="service" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6 max-w-6xl">
+    <section id="service" className="snow-bg py-20 relative">
+
+      <div className="relative z-10 w-full px-10 md:px-16 lg:px-24">
         {/* Titre principal */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12 italic font-serif">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-6 italic font-serif drop-shadow-sm"
+        >
           Prestations de <span className="text-blue-600 italic font-serif">Service</span>
-        </h2>
+        </motion.h2>
+
+        {/* Ligne décorative animée */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1 }}
+          className="mx-auto w-32 h-1 bg-blue-600 rounded-full mb-12"
+        />
+
         {/* Paragraphe intro */}
-        <p className="text-center text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
-          Confiez vos installations aux <span className="font-semibold text-blue-600">vrais professionnels</span> :
+        <p className="text-center text-lg text-gray-700 mb-10 max-w-4xl mx-auto">
+          Confiez vos installations aux{" "}
+          <span className="font-semibold text-blue-600">vrais professionnels</span> :
           notre équipe vous accompagne avec expertise, de la conception à la maintenance.
         </p>
+
         {/* Layout en 2 colonnes */}
         <div className="grid md:grid-cols-4 gap-8">
           {/* Colonne gauche - Boutons */}
           <div className="flex flex-col gap-4 md:col-span-1">
             {prestations.map((p, i) => (
-              <button
+              <motion.button
                 key={i}
+                whileHover={{ scale: 1.03 }}
                 onClick={() => setActiveIndex(i)}
-                className={`px-6 py-3 rounded-lg font-semibold text-left transition ${
+                className={`px-6 py-3 rounded-xl font-semibold text-left transition-all duration-300 shadow-sm ${
                   activeIndex === i
-                    ? "bg-blue-600 text-white shadow-md"
-                    : "bg-white border border-gray-300 text-gray-700 hover:bg-blue-100"
+                    ? "bg-blue-600 text-white shadow-lg"
+                    : "bg-white/70 backdrop-blur-md border border-gray-200 text-gray-700 hover:bg-blue-100"
                 }`}
               >
                 {p.titre}
-              </button>
+              </motion.button>
             ))}
           </div>
 
@@ -101,90 +119,91 @@ export default function Prestations() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-2xl shadow-xl p-6 md:col-span-3"
+            className="bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl p-8 md:col-span-3 border border-blue-100"
           >
             {/* Paragraphe spécifique au service */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex items-start gap-3 p-4 mb-4 rounded-lg bg-blue-50 border-l-4 border-blue-600 shadow-sm"
+              className="flex items-start gap-3 p-4 mb-6 rounded-lg bg-blue-50/70 border-l-4 border-blue-600 shadow-sm"
             >
-              {/* Icône dynamique selon le service */}
-              {activeIndex === 0 && <Lightbulb className="text-blue-600 w-20 h-6 mt-1" />}
-              {activeIndex === 1 && <Hammer className="text-blue-600 w-20 h-6 mt-1" />}
+              {activeIndex === 0 && <Lightbulb className="text-blue-600 w-6 h-6 mt-1" />}
+              {activeIndex === 1 && <Hammer className="text-blue-600 w-6 h-6 mt-1" />}
               {activeIndex === 2 && <Wrench className="text-blue-600 w-6 h-6 mt-1" />}
 
               <p className="text-gray-700 text-base md:text-lg italic">
                 {prestations[activeIndex].description}
               </p>
             </motion.div>
-            {/* Diaporama */}
-            <Slideshow images={prestations[activeIndex].images} />
 
-           {/* Liste des détails */}
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            {/* GRILLE D'IMAGES (NOUVEAU) */}
+            <ImageGrid images={prestations[activeIndex].images} />
+            {/* FIN GRILLE D'IMAGES */}
+
+            {/* Liste des détails */}
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {prestations[activeIndex].details.map((item, j) => (
                 <motion.div
                   key={j}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: j * 0.1 }}
-                  className="flex items-start gap-3 p-3 rounded-lg bg-gray-50 border border-gray-200 hover:bg-blue-50 hover:shadow-md transition"
+                  className="flex items-start gap-3 p-3 rounded-lg bg-white/70 border border-gray-200 hover:bg-blue-50 hover:shadow-md transition"
                 >
                   <span className="text-blue-600 text-lg">✔</span>
                   <p className="text-gray-700">{item}</p>
                 </motion.div>
               ))}
             </div>
-
           </motion.div>
         </div>
       </div>
     </section>
+
   );
 }
 
-// Composant Diaporama
-function Slideshow({ images }) {
-  const [index, setIndex] = useState(0);
+// ----------------------------------------------------------------------
+// NOUVEAU Composant pour la grille d'images
+// ----------------------------------------------------------------------
 
-  useEffect(() => {
-    const timer = setInterval(
-      () => setIndex((prev) => (prev + 1) % images.length),
-      3000
-    );
-    return () => clearInterval(timer);
-  }, [images.length]);
+function ImageGrid({ images }) {
+  // Définir la structure de la grille en fonction du nombre d'images
+  const gridClasses = {
+    1: "grid-cols-1",
+    2: "grid-cols-2",
+    3: "grid-cols-3",
+    4: "grid-cols-2", // 2x2 pour 4 images
+    5: "grid-cols-3", // Gère le cas où la dernière image prend plus de place si elle est seule
+    6: "grid-cols-3", // 3x2 pour 6 images
+  };
+
+  const currentGridClass = gridClasses[images.length] || "grid-cols-2"; // Fallback à 2 colonnes
 
   return (
-    <div className="relative mx-auto w-full max-w-3xl h-72 md:h-96 overflow-hidden rounded-xl shadow-md bg-white flex items-center justify-center">
+    <div
+      className={`mx-auto w-full max-w-4xl grid ${currentGridClass} gap-3 sm:gap-4 overflow-hidden rounded-xl shadow-xl bg-white p-2`}
+    >
       {images.map((src, i) => (
         <motion.img
           key={i}
           src={src}
-          alt=""
-          className={`absolute w-full h-full object-contain ${
-            i === index ? "opacity-100" : "opacity-0"
+          alt={`Image de prestation ${i + 1}`}
+          className={`w-full h-36 sm:h-48 object-cover rounded-lg transition-transform duration-300 hover:scale-[1.03] hover:shadow-lg cursor-pointer ${
+            // Ajustement spécifique pour 5 images (la 5ème peut s'étendre sur deux ou trois colonnes pour centrer)
+            images.length === 5 && i === 4 ? "col-span-full sm:col-span-3 mx-auto" : ""
           }`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: i === index ? 1 : 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: i * 0.1 }}
         />
       ))}
-
-      {/* Petits points indicateurs */}
-      <div className="absolute bottom-3 flex justify-center w-full gap-2">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`w-3 h-3 rounded-full ${
-              i === index ? "bg-blue-600" : "bg-gray-300"
-            }`}
-          />
-        ))}
-      </div>
     </div>
   );
 }
+
+// ----------------------------------------------------------------------
+// L'ancien composant Slideshow n'est plus utilisé et a été remplacé par ImageGrid.
+// Il a été retiré du code complet.
+// ----------------------------------------------------------------------

@@ -67,13 +67,22 @@ export default function Produits() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-center mb-12"
         >
-          <span className="italic font-serif">
+          <span className="text-4xl md:text-5xl font-bold text-center text-blue-900 mb-6 italic font-serif drop-shadow-sm">
             Nos{" "}
-            <span className="text-blue-700">
+            <span className="text-blue-600 italic font-serif">
               produits
             </span>
           </span>
-        </motion.h2>
+          </motion.h2>
+          {/* Ligne décorative animée */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 1 }}
+            className="mx-auto w-32 h-1 bg-blue-600 rounded-full mb-12"
+          />
+              
+        
 
         {/* Grille produits */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -108,7 +117,7 @@ export default function Produits() {
         </div>
 
         {/* Texte en bas */}
-        <div className="text-center max-w-3xl mx-auto text-gray-800 leading-relaxed">
+        <div className="text-center text-lg text-gray-700 mb-10 max-w-4xl mx-auto">
           <p className="mb-4">
             Soucieux d’assurer une technicité et une fiabilité irréprochables,
             nous proposons un éventail complet et innovant des prestations de
