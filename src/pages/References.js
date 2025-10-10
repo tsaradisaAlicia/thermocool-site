@@ -24,8 +24,8 @@ import banque from "../assets/reference/banque.png";
 
 // Tableau des logos
 const references = [
-  afd, rd, lp1, lecofruit, vivo, cfao, orange,materauto,bovima, banque,
-  graphoprint, ipm, mabel, colas, habibo, luxoptica, vima, gastro, ambatovy, etoile, ece
+  afd, rd, lp1, lecofruit, vivo, cfao, orange,materauto,bovima, banque, etoile, ece,
+  graphoprint, ipm, mabel, colas, habibo, luxoptica, vima, gastro, ambatovy
 ];
 
 const References = () => {
