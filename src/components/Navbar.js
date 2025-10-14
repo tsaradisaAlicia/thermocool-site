@@ -71,7 +71,7 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-8 font-medium">
           <div className="flex items-center space-x-2">
             <Mail size={16} className="text-sky-500" />
-            <span>contact@thermocool-thechnology.com</span>
+            <span>contact@thermocool-mg.com</span>
           </div>
           <div className="flex items-center space-x-2">
             <Clock size={16} className="text-sky-500" />
