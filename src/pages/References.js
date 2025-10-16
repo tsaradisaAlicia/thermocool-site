@@ -5,7 +5,8 @@ import lp1 from "../assets/reference/lp1.png";
 import rd from "../assets/reference/rd.png";
 import vivo from "../assets/reference/vivo1.png";
 import cfao from "../assets/reference/cfao.png";
-import orange from "../assets/reference/orange1.png";
+import first from "../assets/reference/first.png";
+//import orange from "../assets/reference/orange1.png";
 import gastro from "../assets/reference/gastro1.png";
 import mabel from "../assets/reference/mabel1.png";
 import lecofruit from "../assets/reference/lecofruit.png";
@@ -17,14 +18,15 @@ import vima from "../assets/reference/vima.png";
 import ipm from "../assets/reference/ipm.png";
 import ambatovy from "../assets/reference/ambatovy.jpg";
 import etoile from "../assets/reference/5ETOILES.jpg";
-import ece from "../assets/reference/ece.png";
+import ravinala from "../assets/reference/ravinala.jpg";
+//import ece from "../assets/reference/ece.png";
 import materauto from "../assets/reference/materauto.png";
 import bovima from "../assets/reference/bovima.png";
 import banque from "../assets/reference/banque.png";
 
 // Tableau des logos
 const references = [
-  afd, rd, lp1, lecofruit, vivo, cfao, orange,materauto,bovima, banque, etoile, ece,
+  afd, rd, lp1, lecofruit, vivo, cfao,first, materauto,bovima, banque, etoile, ravinala,
   graphoprint, ipm, mabel, colas, habibo, luxoptica, vima, gastro, ambatovy
 ];
 
