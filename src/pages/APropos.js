@@ -79,11 +79,12 @@ export default function APropos() {
               title: "Création",
               text: "Fondée en 2011",
             },
-            {
+            /*{
               icon: <User className="w-10 h-10 text-blue-600 mb-4" />,
               title: "Gérant",
               text: "RANDRIAMANAMPISOA Falimanana",
             },
+            */
             {
               icon: <Users className="w-10 h-10 text-blue-600 mb-4" />,
               title: "Équipe",
