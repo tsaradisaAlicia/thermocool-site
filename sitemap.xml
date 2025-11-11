@@ -9,10 +9,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thermocool-mg.vercel.app/service</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://thermocool-mg.vercel.app/produits</loc>
     <priority>0.8</priority>
   </url>
