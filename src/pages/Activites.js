@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import clim0 from "../assets/climatisation&froid/clim0.jpg";
 import clim1 from "../assets/climatisation&froid/clim1.jpg";

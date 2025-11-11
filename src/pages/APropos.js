@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, User, Users, Award, CheckCircle } from "lucide-react";
+import { Calendar, Users, Award, CheckCircle } from "lucide-react";
 import bureau1 from "../assets/bureau1.jpg";
 
 export default function APropos() {
