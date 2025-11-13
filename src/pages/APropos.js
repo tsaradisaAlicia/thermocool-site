@@ -72,7 +72,7 @@ export default function APropos() {
         </div>
 
         {/* Infos principales */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {[
             {
               icon: <Calendar className="w-10 h-10 text-blue-600 mb-4" />,
