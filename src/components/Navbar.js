@@ -58,7 +58,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full z-30 shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-30 shadow-md">
       {/* Bandeau supérieur blanc */}
       <div className="bg-white text-sm text-gray-700 py-2 px-6 flex justify-between items-center border-b border-gray-200">
         {/* Logo centré */}
