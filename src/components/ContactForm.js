@@ -97,7 +97,7 @@ export default function Contact() {
                     href="mailto:contact@thermocool-thechnology.com"
                     className="text-blue-300 hover:underline ml-2"
                   >
-                    contact@thermocool-mg.com
+                    contact@thermocool-mg.org
                   </a>
                 </p>
               </div>
