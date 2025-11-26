@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
+
+    <!-- Favicon (Google exige une URL absolue) -->
+    <link rel="icon" href="https://thermocool-mg.org/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="https://thermocool-mg.org/favicon.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#ffffff" />
-    
+
+    <!-- Meta description SEO -->
     <meta
       name="description"
-      content="Spécialiste du froid, climatisation, chambres froides, ventilation mécanique contrôlée, plomberie, adduction et surpression d'eau, sécurité incendie et matériels de cuisine. Adresse: 26 B IV By-pass Ambohimangakely, Antananarivo 103, MADAGASCAR. Téléphone: +261 34 60 931 03 / +261 34 21 310 81"
+      content="Spécialiste du froid, climatisation, chambres froides, ventilation mécanique contrôlée, plomberie, adduction et surpression d'eau, sécurité incendie et matériels de cuisine à Madagascar."
     />
-    
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="THERMOCOOL TECHNOLOGY" />
     <meta
       property="og:description"
       content="Solutions professionnelles en froid, climatisation, ventilation et salles informatiques à Madagascar."
     />
-    <meta property="og:image" content="%PUBLIC_URL%/favicon.png" />
+    <meta property="og:image" content="https://thermocool-mg.org/favicon.png" />
     <meta property="og:url" content="https://thermocool-mg.org" />
     <meta property="og:type" content="website" />
-    
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:image" content="%PUBLIC_URL%/favicon.png" />
-    
+    <meta name="twitter:image" content="https://thermocool-mg.org/favicon.png" />
+
+    <!-- Title -->
     <title>THERMOCOOL TECHNOLOGY</title>
-    
+
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://thermocool-mg.org" />
-    
+
+    <!-- Schema.org (nécessaire pour le logo dans Google !) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -50,20 +60,20 @@
       }
     }
     </script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJN81HN9HS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-WJN81HN9HS');
-</script>
+    <!-- Google tag (Analytics) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJN81HN9HS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WJN81HN9HS');
+    </script>
 
   </head>
 
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>Vous devez activer JavaScript pour utiliser cette application.</noscript>
     <div id="root"></div>
-    </body>
+  </body>
 </html>
