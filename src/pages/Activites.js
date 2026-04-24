@@ -21,6 +21,7 @@ import vmc3 from "../assets/vmc/vmc3.jpg";
 
 import plomberie1 from "../assets/plomberie/plomberie1.jpeg";
 import plomberie2 from "../assets/plomberie/plomberie2.png";
+import plomberie3 from "../assets/plomberie/plomberie3.jpg";
 
 import incendie1 from "../assets/incendie/incendie1.jpg";
 import incendie2 from "../assets/incendie/incendie2.png";
@@ -58,7 +59,7 @@ const domaines = [
   },
   {
     titre: "Plomberie",
-    images: [plomberie1, plomberie2],
+    images: [plomberie1, plomberie2, plomberie3],
     desc: [
       "Adduction d’eau",
       "Surpression d’eau",
