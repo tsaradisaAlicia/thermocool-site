@@ -16,7 +16,7 @@ import des1 from "../assets/vmc/des1.png";
 import vmc1 from "../assets/vmc/vmc1.jpg";
 import des2 from "../assets/vmc/des2.jpg";
 import vmc2 from "../assets/vmc/vmc2.jpg";
-import des3 from "../assets/vmc/des3.jpg";                                                                  
+import des3 from "../assets/vmc/des3.jpg";
 import vmc3 from "../assets/vmc/vmc3.jpg";
 
 import plomberie1 from "../assets/plomberie/plomberie1.jpeg";
@@ -72,7 +72,12 @@ const domaines = [
   {
     titre: "Sécurité incendie",
     images: [incendie1, incendie2],
-    desc: ["Groupes de surpression incendie"],
+    desc: [
+      "Groupes de surpression incendie",
+      "Réseaux RIA",
+      "Colonnes sèches et humides",
+      "Maintenance des installations incendie"
+    ],
   },
   {
     titre: "Grandes Cuisines",
@@ -88,9 +93,9 @@ const domaines = [
 export default function Activites() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const isSmallSection = 
-  domaines[activeIndex].titre === "Plomberie" || 
-  domaines[activeIndex].titre === "Sécurité incendie";
+  const isSmallSection =
+    domaines[activeIndex].titre === "Plomberie" ||
+    domaines[activeIndex].titre === "Sécurité incendie";
 
   return (
     <section id="activites" className="py-20 bg-gradient-to-b from-white to-blue-50">
@@ -138,8 +143,8 @@ export default function Activites() {
           <div className="flex flex-col md:flex-row gap-6 items-start">
 
             {/* Images */}
-            <ImageGrid 
-              images={domaines[activeIndex].images} 
+            <ImageGrid
+              images={domaines[activeIndex].images}
               isSmallSection={isSmallSection}
             />
 
@@ -160,15 +165,23 @@ export default function Activites() {
   );
 }
 
-// 🔥 Composant ImageGrid amélioré
+// 🔥 ImageGrid intelligent
 function ImageGrid({ images, isSmallSection }) {
+  const count = images.length;
+
   return (
     <div
       className={`
         grid gap-4 w-full
         ${
           isSmallSection
-            ? "grid-cols-1 md:grid-cols-2 md:w-2/3"
+            ? count === 1
+              ? "grid-cols-1 md:w-1/2"
+              : count === 2
+              ? "grid-cols-1 md:grid-cols-2 md:w-2/3"
+              : count === 3
+              ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:w-2/3"
+              : "grid-cols-2 md:grid-cols-3 md:w-2/3"
             : "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 md:w-1/2"
         }
       `}
@@ -185,7 +198,13 @@ function ImageGrid({ images, isSmallSection }) {
               w-full object-cover
               ${
                 isSmallSection
-                  ? "h-64 md:h-80"   // 🔥 GRANDES images
+                  ? count === 1
+                    ? "h-72 md:h-96"
+                    : count === 2
+                    ? "h-64 md:h-80"
+                    : count === 3
+                    ? "h-48 md:h-56"
+                    : "h-44 md:h-52"
                   : "h-40 md:h-48"
               }
             `}
